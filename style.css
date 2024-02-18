@@ -78,6 +78,97 @@
 
 
 
+.menu-on-page {
+  position: sticky;
+    top: 10px;
+    color: rgb(40, 129, 37);
+}
+.menu-on-page__btn {
+  width: 50px;
+  height: 30px;
+  background-image: url(img/arrow-down-up.png);
+  background-repeat: no-repeat;
+  background-position-y: -18px;
+  opacity: 0.2;
+
+  border: none;
+  background-color: transparent;
+}
+
+.menu-on-page__btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.menu-on-page__btn.active {
+  background-position-x: 95%;
+}
+
+.menu-on-page {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 20px;
+}
+
+.menu-on-page ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+
+}
+
+.layout__tab-list {
+  height: 0px;
+
+}
+
+.menu-on-page__btn.active~.layout__tab-list {
+  height: auto;
+}
+
+
+
+
+
+
+
+
+.layout__tab-list {
+  display: inline-block;
+  font-size: 1em;
+  background: var(--color-yellow);
+}
+
+.layout__tab-list li {
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+
+  margin: 0 10px;
+}
+
+.layout__content-item {
+  display: none;
+  width: 100%;
+  text-align: left;
+}
+
+.layout__content-item.is-active {
+  display: block;
+}
+
+.layout__tab-item.is-active {
+  color: rgb(170, 162, 162);
+}
+
+
+
+
+
+
+
 
 /* js */
 
@@ -398,41 +489,6 @@ summary::-webkit-details-marker {
 
 
 
-
-
-
-
-
-.layout__tab-list {
-  display: inline-block;
-  font-size: 1em;
-
-  position: sticky;
-  top: 10px;
-}
-.layout__content-list {
-  display: inline-block;
-  margin-left: 170px;
-
-  width: 100%;
-  padding-right: 200px;
-}
-.layout__tab-list li {
-  text-align: left;
-  cursor: pointer;
-  width: 100%;
-}
-.layout__content-item {
-  display: none;
-  width: 100%;
-  text-align: left;
-}
-.layout__content-item.is-active {
-  display: block;
-}
-.layout__tab-item.is-active {
-  color: rgb(170, 162, 162);
-}
 
 
 

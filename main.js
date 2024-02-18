@@ -1,3 +1,12 @@
+let menuOnPageBtn = document.querySelector('.menu-on-page__btn');
+
+menuOnPageBtn.onclick = function () {
+  menuOnPageBtn.classList.toggle('active');
+}
+
+
+
+
 const tabItems = Array.from(document.querySelectorAll('.tab-item'));
 const contentItems = Array.from(document.querySelectorAll('.content-item'));
 //  Array.from что бы работал .find
