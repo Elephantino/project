@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+
+    <header class="page--header">
+      <div class="container">
+        <div class="header__inner">
+
+          <a href="../index.html">
+            <svg width="125px" height="20px">
+              <use href="../img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+
+          <ul class="header-list list-reset">
+            <li class="item"><a href="examples.html">examples</a></li>
+            <li class="item"><a href="html.html">html</a></li>
+            <li class="item"><a href="css.html">css</a></li>
+            <li class="item"><a href="js.html">js</a></li>
+            <li class="item"><a href="svg.html">svg</a></li>
+            <li class="item"><a href="about.html">about</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </header>
+
+
+
+
+    <main class="main">
+      <div class="container">
+        <div class="main__inner">
+
+          <section class="html layout">
+
+            <ol class="layout__tab-list list-reset">
+
+              <li class="layout__tab-item is-active">начальная</li>
+              <li class="layout__tab-item">a</li>
+              <li class="layout__tab-item">text</li>
+              <li class="layout__tab-item">fonts</li>
+              <li class="layout__tab-item">списки</li>
+              <li class="layout__tab-item">meta</li>
+              <li class="layout__tab-item">input</li>
+              <li class="layout__tab-item">blockquote</li>
+              <li class="layout__tab-item"></li>
+              <li class="layout__tab-item"></li>
+              <li class="layout__tab-item"></li>
+              <li class="layout__tab-item"></li>
+
+            </ol>
+
+
+            <ul class="layout__content-list list-reset">
+
+              <li class="layout__content-item is-active"></li>
+              <li class="layout__content-item">
+                <div class="performance">
+                  <h4>якорь:</h4>
+                  <p><code>&lt;a href="../../<span class="color-red">#link</span>"&gt; &lt;/a&gt;</code></p>
+                  <p><code>&lt;a name="<span class="color-red">link</span>"&gt; &lt;/a&gt;</code></p>
+                </div>
+
+                <pre>
+      <code>
+    a { ... }
+    a:link { ... }
+    a:visited { ... }
+    a:focus { ... }
+    a:hover { ... }
+    a:active { кнопка мыши зажата на ссылке }
+      </code>
+    </pre>
+                <details class="show-piece">
+                  <summary><code>Зона кликабельности ссылки</code></summary>
+                  <pre>
+      <code>
+    div {
+      position: relative;
+    }
+    
+    a:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+      </code>
+    </pre>
+                </details>
+
+                <details class="show-piece">
+                  <summary><code>ссылка на файл</code></summary>
+                  <p>при переходе по ссылке на файл браузер предложит его скачать.</p>
+                  <p>Однако, если браузер умеет обрабатывать файлы этого типа, то содержимое файла откроется прямо в
+                    браузере. Чаще всего так
+                    происходит с изображениями.</p>
+                  <p>предотвратить открытие файлов прямо в браузере:</p>
+                  <pre>
+      <code>
+    &lt;a href="file.pdf" download&gt;Браузер скачает меня, а не будет читать&lt;/a&gt;
+      
+    rel="noopener" // атрибут позволяет игнорировать скрипты сторонней страницы
+    </code>
+    </pre>
+                  <p>При скачивании или загрузке файлов со сторонних сайтов для безопасности можно использовать атрибут
+                    rel="noopener". Этот
+                    атрибут позволяет игнорировать скрипты сторонней страницы, которые могут влиять на загрузку файла.
+                    Особенно актуален
+                    этот атрибут в случае, если загрузка происходит в новой вкладке или новом окне.</p>
+                </details>
+
+                </details>
+              </li>
+              <li class="layout__content-item text">
+
+
+
+
+
+
+                <p><code><b>text-overflow:</b> clip / ellipsis</code></p>
+                <div class="text-overflow">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                </div>
+
+                <hr>
+
+                <div class="preview text-indent">
+                  <p class="text"><code><b>text-indent -- </b></code>красная строка</p>
+                  <div class="inner">
+                    <div class="item">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at.</p>
+                    </div>
+                    <div class="item">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="preview text-align">
+                  <p class="text">
+                    <code><b>text-align:</b> left / right / centet / justify /<span class="color-red">start и end (зависят от direction ltr/rtl)</span></code>
+                  </p>
+                  <p>задается контейнеру, внутри которого находится контент</p>
+                  <div class="inner">
+                    <div class="item">
+                      <p>left</p>
+                      <p>right</p>
+                      <p>center</p>
+                      <p>start</p>
+                      <p>start</p>
+                    </div>
+                    <div class="item">
+                      <p><b>justify</b></p>
+                      <p>Lorem ipsum dolor amet. Inventore maxime exercitationem saepe esse. Lorem ipsum dolor sit
+                        consectetur
+                        exercitationem elit. Numquam tempore, delectus exercitationem exercitm error.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="preview text-justify">
+                  <p class="text"><code><b>text-justify -- </b></code>управление пробелами в
+                    <code>text-align: justify</code> (<span class="color-red">почти нет поддержки</span>)</p>
+
+                  <div class="inner">
+                    <div class="item">
+                      <p>auto</p>
+                      <p>Lorem ipsum dolor amet. Inventore maxime exercitationem saepe esse. Lorem ipsum dolor sit
+                        consectetur
+                        exercitationem elit. Numquam tempore, delectus exercitationem exercitm error.</p>
+                    </div>
+                    <div class="item">
+                      <p>inter-word</p>
+                      <p>Lorem ipsum dolor amet. Inventore maxime exercitationem saepe esse. Lorem ipsum dolor sit
+                        consectetur
+                        exercitationem elit. Numquam tempore, delectus exercitationem exercitm error.</p>
+                    </div>
+                    <div class="item">
+                      <p>inter-character</p>
+                      <p>Lorem ipsum dolor amet. Inventore maxime exercitationem saepe esse. Lorem ipsum dolor sit
+                        consectetur
+                        exercitationem elit. Numquam tempore, delectus exercitationem exercitm error.</p>
+                    </div>
+                    <div class="item">
+                      <p>distribute</p>
+                      <p>Lorem ipsum dolor amet. Inventore maxime exercitationem saepe esse. Lorem ipsum dolor sit
+                        consectetur
+                        exercitationem elit. Numquam tempore, delectus exercitationem exercitm error.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="preview vertical-align">
+                  <p class="text">
+                    <code><b>vertical-align -- </b>top / bottom / baseline / middle / sub / super / text-bottom / text-top</code>
+                  </p>
+                  <p>задаётся элементу, а не содержащему его контейнеру</p>
+                  <div class="inner">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="preview writing-mode">
+                  <p class="text"><code><b>writing-mode:</b> horizontal-tb / vertical-rl / vertical-lr</code></p>
+                  <div class="inner">
+                    <div class="item">
+                      <p>horizontal-tb</p>
+                    </div>
+                    <div class="item">
+                      <p>vertical-rl</p>
+                    </div>
+                    <div class="item">
+                      <p>vertical-lr</p>
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="preview text-orientation">
+                  <p class="text"><code><b>text-orientation:</b> upright / mixed </code></p>
+                  <div class="inner">
+                    <div class="item">
+                      <p>upright</p>
+                    </div>
+                    <div class="item">
+                      <p>mixed</p>
+                      <p>vertical-rl</p>
+                    </div>
+                    <div class="item">
+                      <p>mixed</p>
+                      <p>vertical-lr</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>text-align</h2>
+                <p>задается контейнеру, внутри которого находится контент</p>
+
+                <div class="text-align">
+                  <ul class="list-reset">
+                    <li>
+                      <h3>left (default)</h3>
+                      <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
+                    </li>
+                    <li style="text-align: right">
+                      <h3>right</h3>
+                      <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
+                    </li>
+                    <li style="text-align: center">
+                      <h3>center</h3>
+                      <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
+                    </li>
+                    <li style="text-align: justify">
+                      <h3>justify</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus incidunt aliquam
+                        voluptate? Maiores, eos saepe. Iusto facilis laboriosam nobis ad!</p>
+                    </li>
+                    <li style="text-align: start">
+                      <h3>start</h3>
+                      <p>зависит от <code>direction ltr/rtl</code></p>
+                    </li>
+                    <li style="text-align: end">
+                      <h3>end</h3>
+                      <p>зависит от <code>direction ltr/rtl</code></p>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <p><code>vertical-align -- </code>задаётся элементу, а не содержащему его контейнеру</p>
+                <p><code>top / bottom / baseline / middle / sub / super / text-bottom / text-top</code></p>
+
+                <p><code>line-height -- </code>межстрочный интервал</p>
+
+                <p><code>letter-spacing -- </code> интервал между символами</p>
+
+                <p><code>white-space --</code> управление пробелами</p>
+
+                <p><code>sub / sup -- </code> нижний и верхний индекс
+                  <code> -- 20м<sup>2</sup>H<sub>2</sub>O - X<sup>3</sup>+X<sup>2</sup>=1</code>
+                </p>
+
+                <div class="performance">
+                  <pre><code>
+      <strong>теги изменений</strong>
+
+del / ins / strong / em / b / i / u / s
+
+del -- «delete» // текст который был удалён в новой версии документа.
+ins -- «insert» // текст который был добавлен в новой версии документа.
+
+&lt;del datetime="2009-10-10T23:38-07:00"&gt;Поспать&lt;/del&gt;
+
+
+  del - ins  имеют атрибуты:
+
+cite -- используется для ссылки на источник или описание произошедшего изменения
+datetime -- можно указать дату и время поправки / предназначен не для людей
+
+
+<b>&lt;b&gt;жирный текст&lt;/b&gt;</b>
+<strong>&lt;strong&gt;важный жирный текст&lt;/strong&gt;</strong>
+<em>&lt;em&gt;важный курсивный текст&lt;/em&gt;</em>
+<i>&lt;i&gt;курсивный текст&lt;/i&gt;</i>
+<u>&lt;u&gt;подчеркнутый текст&lt;/u&gt;</u>
+<s>&lt;s&gt;перечеркнутый текст&lt;/s&gt;</s>
+<del>&lt;del&gt;выжный перечеркнутый текст&lt;/del&gt;</del>
+<ins>&lt;ins&gt;выжный подчеркнутый текст&lt;/ins&gt;</ins>
+</code></pre>
+
+                </div>
+
+
+
+              </li>
+              <li class="layout__content-item fonts">
+                <p><code>font: font-style, font-variant, font-weight, font-size/line-height, font-family;</code></p>
+                <pre>
+      <code>
+    @font-face {
+      font-family: 'Roboto Condensed';
+      src: url("../fonts/RobotoCondensed-Light.ttf");
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+    }
+      </code>
+    </pre>
+
+                <p>
+                  <a href="https://fontstorage.com/blog/about-font-face-part-one/">
+                    Подключение нестандартных шрифтов. Часть первая
+                  </a>
+                </p>
+                <p>
+                  <a href="https://fontstorage.com/blog/about-font-face-part-two/">
+                    Подключение нестандартных шрифтов. Часть вторая
+                  </a>
+                </p>
+              </li>
+              <li class="layout__content-item lists">
+                <details class="show-piece unordered-list">
+                  <summary><code>unordered list</code> -- неупорядоченный список</summary>
+                  <p>в ul могут находиться только теги li -- «list item»</p>
+                  <p>Пунктов должно быть не менее одного.</p>
+                </details>
+
+                <details class="show-piece ordered-list">
+                  <summary><code>ordered list</code> -- упорядоченный список</summary>
+                  <p><code>У ol может быть несколько атрибутов: start, reversed и type.</code></p>
+                  <p>По умолчанию нумерация пунктов начинается с единицы, а с помощью start можно поменять это стартовое
+                    число. Нумерация пунктов списка может также быть отрицательной.</p>
+                  <pre>
+      <code>
+    start     -- меняет стартовое число нумерации, может быть отрицательным.
+    reversed  -- меняет направление нумерации на противоположный, не требует значения
+    type      -- можно задавать различные типы маркеров
+      </code>
+    </pre>
+                  <ul class="list-reset">
+                    <li>1: десятичное число</li>
+                    <li>a: буквы латинского алфавита в нижнем регистре</li>
+                    <li>A: буквы латинского алфавита в верхнем регистре</li>
+                    <li>i: римские цифры в нижнем регистре</li>
+                    <li>I: римские цифры в верхнем регистре</li>
+                  </ul>
+                </details>
+
+                <details class="show-piece description-list">
+                  <summary><code>description list</code> -- список описаний</summary>
+                  <p>может содержать более одного описания для каждого термина.</p>
+                  <pre>
+      <code>
+    &lt;dl&gt;    «description list»           сам список описаний;
+    &lt;dt&gt;    «description term»           термин;
+    &lt;dd&gt;    «description definition»     описание или определение.
+      </code>
+    </pre>
+
+                </details>
+              </li>
+              <li class="layout__content-item meta">
+                <p>Перечень ключевых слов задаётся тегом , у которого атрибут name имеет значение keywords. Ключевые
+                  слова
+                  (самые важные слова из содержания страницы) перечисляются в атрибуте content через запятую</p>
+                <pre>
+      <code>
+    &lt;meta name="keywords" content="важные, ключевые, слова"&gt;
+      </code>
+    </pre>
+                <p>Краткое описание страницы задаётся похожим образом, только значение атрибута name меняется на
+                  description</p>
+                <pre>
+      <code>
+    &lt;meta name="description" content="краткое описание"&gt;
+      </code>
+    </pre>
+              </li>
+              <li class="layout__content-item input">
+                <details class="show-piece custom-input">
+                  <summary><code>custom input</code></summary>
+                  <p>input снаружи label</p>
+
+                  <pre>
+      <code>
+    &lt;input class=“custom-checkbox reset” type="checkbox" id="checkbox-1”&gt;
+    &lt;label for=" checkbox-1"&gt;&lt;/label&gt;
+    
+    
+          Скрываем инпут добавлением класса
+    
+          Создаем чекбокс
+        
+    .custom-checkbox + label::before {
+      content: "";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      border: 1px solid red;
+      border-radius: .25em;
+      margin-right: .5em;
+      vertical-align: middle;
+    
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 50% 50%;
+    }
+    
+    
+       checked:
+    
+    .custom-checkbox:checked + label::before {
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("");
+    }
+    
+          при наведении курсора на checkbox
+    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+      border-color: #b3d7ff;
+    }
+    
+          для активного состояния чекбокса (при нажатии на него)
+    .custom-checkbox:not(:disabled):active+label::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+    }
+    
+          для чекбокса, находящегося в фокусе
+    .custom-checkbox:focus+label::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+          для чекбокса, находящегося в фокусе и не находящегося в состоянии checked
+    .custom-checkbox:focus:not(:checked)+label::before {
+      border-color: #80bdff;
+    }
+    
+          для чекбокса, находящегося в состоянии disabled
+    .custom-checkbox:disabled+label::before {
+      background-color: #e9ecef;
+    }
+      </code>
+    </pre>
+
+                  <p>input вложен в label</p>
+                  <pre>
+      <code>
+    &lt;label class="custom-radio"&gt;
+      &lt;input class=“reset” type="radio" name="color" value="indigo"&gt;
+      &lt;input class=“reset” type="radio" name="color" value="red"&gt;
+      &lt;span&gt;без спана не обойтись в этом случае&lt;/span&gt;
+    &lt;/label&gt;
+    
+    
+    Скрываем инпут добавлением класса
+    
+    для элемента label связанного с .custom-radio
+    
+    .custom-radio &gt; span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .5em;
+    }
+    
+    
+    создание в label псевдоэлемента before 
+    
+    .custom-radio &gt; span::before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      border: 1px solid #adb5bd;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    
+    
+    при наведении курсора на радио
+    
+    .custom-radio &gt; input:not(:disabled):not(:checked)+span:hover::before {
+      border-color: #b3d7ff;
+    }
+    
+    
+          для активной радиокнопки (при нажатии на неё)
+    
+    .custom-radio &gt; input:not(:disabled):active+span::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+    }
+    
+    
+          для радиокнопки, находящейся в фокусе
+    
+    .custom-radio &gt; input:focus+span::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+    
+          для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked
+    
+    .custom-radio &gt; input:focus:not(:checked) + span::before {
+      border-color: #80bdff;
+    }
+    
+    
+          для радиокнопки, находящейся в состоянии checked
+    
+    .custom-radio &gt; input:checked + span::before {
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("http://");
+    }
+    
+    
+          для радиокнопки, находящейся в состоянии disabled
+    
+    .custom-radio &gt; input:disabled + span::before {
+      background-color: #e9ecef;
+    }
+    
+      </code>
+    </pre>
+
+                  <p>custom checkbox</p>
+                  <pre>
+      <code>
+    
+    &lt;form class="check"&gt;
+      &lt;input type="checkbox" class="check__input" id="agreement"&gt;
+      &lt;label class="check__label" for="agreement"&gt; I'm agree&lt;/label&gt;
+    &lt;/form&gt;
+    
+    .check__input {
+      position: absolute;
+      left: -999%;
+      width: 1px;
+      height: 1px;
+      clip: rect(0 0 0 0);
+      opacity: 0;
+      z-index: -1;
+    }
+    
+    .check__label {
+      vertical-align: middle;
+    }
+    
+    .check__label::before {
+      content: '';
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
+      padding-bottom: 0.05em;
+      font-size: 0.7em;
+      border: 1px solid #000;
+      border-radius: 0.2em;
+      vertical-align: middle;
+      margin-right: 0.35em;
+      text-align: center;
+      position: relative;
+      top: -0.2em;
+    }
+    
+    .check__input:checked + .check__label::before {
+      content: '\2714';
+    }
+      </code>
+    </pre>
+                </details>
+
+                <details class="show-piece range-reset">
+                  <summary><code>input type range -- reset</code></summary>
+                  <pre>
+      <code>
+        input type range reset
+    
+    &lt;input class="range" type="range" min="0" max="100" value="25" &gt;
+    
+    .range {
+      appearance: none;
+      -webkit-appearance: none;
+      
+      outline: none;
+    }
+    
+    .range::-webkit-slider-thumb {  ползунок
+      -webkit-appearance: none;
+    
+      cursor: pointer;
+    }
+    .range::-moz-range-thumb {      ползунок
+      -moz-appearance: none;
+    
+      cursor: pointer;
+    }
+    
+    .range::-moz-range-track {      полоса
+      appearance: none;
+    
+      outline: none;
+    }
+    .range::-webkit-slider-thumb:hover,
+    .range::-webkit-slider-thumb:active {
+      увеличить размер при наведении и перетаскивании
+      или цвет поменять(ну крч выделить активный ползунок)
+    }
+    .range::-moz-range-thumb:hover,
+    .range::-moz-range-thumb:active{
+      width: 20px;
+      height: 20px;
+    }
+    
+    </code>
+    </pre>
+
+                </details>
+
+                <details class="show-piece select">
+                  <summary><code>select</code></summary>
+                  <p>Вложенность групп не ограничена, внутрь каждой группы можно вложить другие группы.</p>
+                  <p>Аналогично можно группировать элементы и в списках со множественным выбором</p>
+                  <pre>
+      <code>
+    &lt;select name="variants"&gt;
+      &lt;optgroup label="Группа вариантов 1"&gt;
+        &lt;option value="1"&gt;Вариант 1&lt;/option&gt;
+        &lt;option value="2"&gt;Вариант 2&lt;/option&gt;
+        &lt;option value="3"&gt;Вариант 3&lt;/option&gt;
+      &lt;/optgroup&gt;
+      &lt;optgroup label="Группа вариантов 2"&gt;
+        &lt;option value="4"&gt;Вариант 4&lt;/option&gt;
+        &lt;option value="5"&gt;Вариант 5&lt;/option&gt;
+        &lt;option value="6"&gt;Вариант 6&lt;/option&gt;
+      &lt;/optgroup&gt;
+    &lt;/select&gt;
+      </code>
+    </pre>
+                </details>
+
+                <details class="show-piece readonly-disabled">
+                  <summary><code>Запрет редактирования полей</code></summary>
+                  <p><code>readonly</code> не дает пользователю изменять поле (вводить новый текст, модифицировать
+                    существующий).
+                    Введенное
+                    значение можно выделить и скопировать. Данные из этого поля отправляются на сервер.</p>
+                  <p><code>disabled</code> не дает пользователю изменять поле (вводить новый текст, модифицировать
+                    существующий).
+                    Нельзя поставить
+                    фокус в это поле, введенное значение нельзя выделять и копировать. Данные из этого поля НЕ
+                    отправляются
+                    на
+                    сервер.</p>
+                  <pre>
+      <code>
+    &lt;input type="text" readonly&gt;
+    &lt;input type="text" disabled&gt;
+      </code>
+    </pre>
+                </details>
+
+                <details class="show-piece autocomplete">
+                  <summary><code>autocomplete</code></summary>
+                  <p>При вводе первых букв текста выводится список сохранённых ранее значений</p>
+                  <p>Параметрами автозаполнения можно управлять используя атрибут autocomplete.</p>
+                  <p>Он может принимать два значения on и off</p>
+                  <p>Отключение автозаполнения обычно используется из соображений безопасности, например, чтобы не
+                    сохранялись
+                    пароли, номера
+                    банковских карт и так далее.</p>
+                  <p><code>&lt;input type="text" autocomplete="off"&gt;</code></p>
+                </details>
+
+                <details class="show-piece tabindex">
+                  <summary><code>tabindex</code></summary>
+                  <article>
+                    <p>Из соображений доступности не рекомендуется менять порядок навигации по полям ввода по
+                      умолчанию</p>
+                  </article>
+
+                  <pre>
+      <code>
+    &lt;input type="text" tabindex="3"&gt;
+      </code>
+    </pre>
+
+                  <p>В качестве значения может использоваться любое целое положительное число. Значения выстраиваются
+                    последовательно и
+                    переход между элементами происходит от меньшего значения к большему.</p>
+                  <p>Если представлено отрицательное значение — элемент может быть выделен, однако не участвует в
+                    последовательной навигации</p>
+                  <p>Если представлен 0 — элемент может быть выделен и достигнут с помощью последовательной
+                    навигации,
+                    однако
+                    порядок
+                    навигации определён платформой</p>
+
+                </details>
+
+                <h2>localStorage</h2>
+                <p><a href="https://learn.javascript.ru/localstorage" target="_blank">хранение данных в
+                    браузере</a></p>
+
+                <p><a
+                    href="https://codepen.io/collection/DgYaMj/?cursor=eyJjb2xsZWN0aW9uX2lkIjoiRGdZYU1qIiwiY29sbGVjdGlvbl90b2tlbiI6bnVsbCwibGltaXQiOjQsIm1heF9pdGVtcyI6OTksIm9mZnNldCI6MjQsInBhZ2UiOjcsInNvcnRfYnkiOiJwb3NpdGlvbiIsInNvcnRfb3JkZXIiOiJBc2MifQ==">input
+                    type range</a></p>
+                <p><a href="https://css-live.ru/articles-css/background-clip-use-cases.html">В СЕРЕДИНЕ
+                    СТРАНИЦЫ</a></p>
+
+              </li>
+              <li class="layout__content-item ">
+
+                <div class="performance">
+                  <p><code>q</code> -- встроенная цитата</p>
+                  <pre>
+      <code>
+    &lt;q cite="https://www.w3.org/TR/html52/"&gt;...&lt;/q&gt;.
+      </code>
+    </pre>
+                  <p>cite — «расширенная версия» атрибута cite. В нём можно указывать помимо адреса источника цитаты ещё
+                    и
+                    название произведения, откуда цитируется текст, а также имя автора или организации, чей текст
+                    цитируется.</p>
+                  <pre>
+      <code>
+&lt;p&gt;По словам &lt;cite&gt;Чарльза Буковски&lt;/cite&gt; — &lt;q&gt;Интеллектуал о простой вещи говорит сложно —
+художник сложную вещь описывает простыми словами.&lt;/q&gt;&lt;/p&gt;
+    
+Тег &lt;cite&gt; может быть самостоятельным и не привязываться к цитате:
+    
+&lt;p&gt;Какой доктор ваш любимый (в сериале &lt;cite&gt;Доктор Кто&lt;/cite&gt;)?&lt;/p&gt;
+      </code>
+    </pre>
+                </div>
+
+                <div class="performance">
+                  <p><code>blockquote</code> -- отдельная цитата</p>
+
+                  <p>Для выделения длинных цитат, которые могут состоять из нескольких абзацев</p>
+                  <pre>
+      <code>
+    может быть атрибут cite, содержащий ссылку на источник цитаты
+    также в паре с blockquote можно использовать тег cite
+    
+&lt;blockquote&gt;
+  &lt;p&gt;Ум ценится дорого, когда дешевеет сила.&lt;/p&gt;
+  &lt;cite&gt;Джейсон Стэтхэм&lt;/cite&gt;
+&lt;/blockquote&gt;
+      </code>
+    </pre>
+                </div>
+
+              </li>
+              <li class="layout__content-item"></li>
+              <li class="layout__content-item"></li>
+              <li class="layout__content-item"></li>
+              <li class="layout__content-item"></li>
+
+            </ul>
+
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+
+          footer
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>
