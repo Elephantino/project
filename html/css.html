@@ -68,6 +68,24 @@
 
               <li class="layout__content-item is-active">
 
+                
+                <div class="performance">
+                  <h2>Приоритет</h2>
+                  <pre>
+  <code>
+&lt;div id="floor"&gt;
+  &lt;span class="cat-in-box"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+span { 6 }
+div span { 5 }
+#floor .cat-in-box { 4 }
+.cat-in-box { 3 }
+#floor span { 2 }
+div .cat-in-box { 1 }
+  </code>
+</pre>
+                </div>
 
 
                 <p>border: width / style / color</p>
@@ -116,23 +134,7 @@ border-radius: 10px 20px 30px 40px / 5px 15px 25px 35px;
 
                 </section>
 
-                <div class="performance">
-                  <h2>Приоритет</h2>
-                  <pre>
-  <code>
-&lt;div id="floor"&gt;
-  &lt;span class="cat-in-box"&gt;&lt;/span&gt;
-&lt;/div&gt;
 
-span { 6 }
-div span { 5 }
-#floor .cat-in-box { 4 }
-.cat-in-box { 3 }
-#floor span { 2 }
-div .cat-in-box { 1 }
-  </code>
-</pre>
-                </div>
 
               </li>
               <li class="layout__content-item transform">
@@ -969,9 +971,9 @@ summary::-webkit-details-marker {
 
 
 
-    <footer class="footer">
+    <footer class="page--footer">
       <div class="container">
-        <div class="footer__inner">
+        <div class="page--footer__inner">
 
           footer
 
