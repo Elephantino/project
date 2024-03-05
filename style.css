@@ -604,3 +604,19 @@ summary::-webkit-details-marker {
 }
 
 
+
+
+
+
+
+.place-content-one > .grid__position--item:first-child  {
+  /* place-self: start start; */
+  /* place-content: end end; */
+  /* justify-content: end; */
+  /* align-content: end; */
+
+  
+
+}
+
+
