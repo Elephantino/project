@@ -269,61 +269,6 @@ parseFloat ("17.5") // 17.5
 
                 </section>
 
-                <section class="js__getElement">
-                  <h2 class="title">Получение элементов</h2>
-
-                  <p>Почти все методы возвращают коллекции элементов схожих с массивом но это объекты классов: Array,
-                    NodeList,
-                    HTMLCollection и т.д…</p>
-
-                  <details class="show-piece element">
-                    <summary>element</summary>
-                    <pre>
-    <code>
-let e = document.querySelector('#nav').querySelector('ul.menu__list &gt; li[name="li"] + li');
-console.log(e); // element
-
-let eId = document.getElementById('menu__item-3');
-console.log(eId); // element
-    </code>
-</pre>
-                  </details>
-
-                  <details class="show-piece nodeList">
-                    <summary>NodeList - статическая коллекция элементов</summary>
-                    <pre>
-    <code>
-let eAll = document.querySelectorAll('li');
-console.log(eAll); // NodeList
-console.log(eAll[0]); // element
-
-let eName = document.getElementsByName('li'); //динамическая коллекция
-console.log(eName); // NodeList
-console.log(eName[1]);// element
-
-let e = list.childNodes; //динамическая коллекция
-хранит в себе псевдомассив дочерних узлов
-элемента (теги, комментарии и текстовые узлы).
-    </code>
-</pre>
-                  </details>
-
-                  <details class="show-piece htmlCollection">
-                    <summary>HTMLCollection - динамическая коллекция элементов</summary>
-                    <pre>
-    <code>
-let eTag = document.getElementsByTagName('li');
-console.log(eTag); // HTMLCollection
-console.log(eTag[2]); // element
-
-let eClass = document.getElementsByClassName('menu__item');
-console.log(eClass); // HTMLCollection
-console.log(eClass[3]); // element
-    </code>
-</pre>
-                  </details>
-
-                </section>
 
                 <section class="js__transformation-document">
 

@@ -175,14 +175,14 @@ svg.circle-evenodd {
 
 .drop-shadow .drop-shadow__inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
 }
-
 .drop-shadow .drop-shadow__inner figure>img {
   border: 1px solid red;
   filter: drop-shadow(85px 20px 0px #00000070);
+  max-width: 250px;
+  width: 250px;
 }
-
 .drop-shadow .drop-shadow-multiple {
   padding: 3em 0;
   display: flex;
@@ -206,4 +206,4 @@ svg.circle-evenodd {
   height: 50px;
   background-color: rgb(69, 52, 69);
   margin: 1em;
-}
+} 

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+
+    <header class="page--header">
+      <div class="container">
+        <div class="header__inner">
+
+          <a href="../index.html">
+            <svg width="125px" height="20px">
+              <use href="../img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+
+          <ul class="header-list list-reset">
+            <li class="item"><a href="examples.html">examples</a></li>
+            <li class="item"><a href="html.html">html</a></li>
+            <li class="item"><a href="css.html">css</a></li>
+            <li class="item"><a href="js.html">js</a></li>
+            <li class="item"><a href="svg.html">svg</a></li>
+            <li class="item"><a href="about.html">about</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </header>
+
+
+
+
+    <main class="main">
+      <div class="container">
+        <div class="main__inner">
+
+          <section class="grid">
+
+
+            <h1>grid</h1>
+            <p>Чтобы растянуть грид-элемент, используют слово span, а после указывают число колонок, которые элемент
+              должен занять:</p>
+            <pre>
+  <code>
+.element {              Элемент из примера растянется на две колонки
+  grid-column: span 2;  
+}  
+  </code>
+</pre>
+
+            <article>
+              <h2>grid-auto-flow</h2>
+              <p>Значение по умолчанию row говорит располагать элементы в том порядке, в котором они идут в
+                разметке, и
+                при необходимости
+                создавать новые ряды.</p>
+              <p>Но если указать значение dense, то контейнер будет заполняться так, чтобы не было пропусков.</p>
+              <p>Значение dense заставляет грид-контейнер заполнять пустые ячейки первым подходящим по размеру
+                грид-элементом. При этом
+                визуальный порядок на странице может отличаться от порядка элементов в разметке. Если порядок
+                элементов важен, лучше это
+                значение не использовать.</p>
+            </article>
+
+            <h2>Положение сетки</h2>
+
+            <section class="grid__position">
+
+              <h3>Положение всей сетки</h3>
+              <p><code>justify-content: start | end | center |space-between | space-around | space-evenly</code></p>
+              <p><code>align-content: start | end | center | space-between | space-around | space-evenly;</code></p>
+
+
+
+              <h3>Положение содержимого ячеек</h3>
+              <p><code>justify-items: start | end | center | streach(по дефолту);</code></p>
+              <p><code>align-items: start | end | center | streach(по дефолту);</code></p>
+              <p><code>place-items: align-items / justify-items;</code></p>
+
+              <h3>Положение конкретной ячейки</h3>
+              <h3>
+                <code>justify-self | align-self | place-self: align-self / justify-self;</code></h3>
+
+                <h4 class="color-red-light">
+                  <code>justify-self</code>
+                </h4>
+              <div class="grid__position--example justify-self">
+                <figure class="grid__position--item">
+                  <figcaption><span class="color-red">default</span> --- streach</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="grid__position--item">
+                  <figcaption>justify-self: start;</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="grid__position--item">
+                  <figcaption>justify-self: end;</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="grid__position--item">
+                  <figcaption>justify-self: center;</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+
+              <h4 class="color-red-light">
+                <code>align-self</code>
+              </h4>
+
+              <div class="grid__position--example align-self">
+                <figure class="grid__position--item">
+                  <figcaption><span class="color-red">default</span> --- streach</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="grid__position--item">
+                  <figcaption>align-self: start;</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="grid__position--item">
+                  <figcaption>align-self: end;</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="grid__position--item">
+                  <figcaption>align-self: center;</figcaption>
+                  <div class="grid__example">
+                    <div class="item">
+                      <div>1</div>
+                    </div>
+                    <div class="item">
+                      <div>2</div>
+                    </div>
+                    <div class="item">
+                      <div>3</div>
+                    </div>
+                    <div class="item">
+                      <div>4</div>
+                    </div>
+                    <div class="item">
+                      <div>5</div>
+                    </div>
+                    <div class="item">
+                      <div>6</div>
+                    </div>
+                    <div class="item">
+                      <div>7</div>
+                    </div>
+                    <div class="item">
+                      <div>8</div>
+                    </div>
+                    <div class="item">
+                      <div>9</div>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+
+<h4 class="color-red-light">
+  <code>place-self: align-self / justify-self;</code>
+</h4>
+
+<div class="grid__position--example place-self">
+  <figure class="grid__position--item">
+    <figcaption><span class="color-red">default</span> --- streach</figcaption>
+    <div class="grid__example">
+      <div class="item">
+        <div>1</div>
+      </div>
+      <div class="item">
+        <div>2</div>
+      </div>
+      <div class="item">
+        <div>3</div>
+      </div>
+      <div class="item">
+        <div>4</div>
+      </div>
+      <div class="item">
+        <div>5</div>
+      </div>
+      <div class="item">
+        <div>6</div>
+      </div>
+      <div class="item">
+        <div>7</div>
+      </div>
+      <div class="item">
+        <div>8</div>
+      </div>
+      <div class="item">
+        <div>9</div>
+      </div>
+    </div>
+  </figure>
+  <figure class="grid__position--item">
+    <figcaption>align-self: start;</figcaption>
+    <div class="grid__example">
+      <div class="item">
+        <div>1</div>
+      </div>
+      <div class="item">
+        <div>2</div>
+      </div>
+      <div class="item">
+        <div>3</div>
+      </div>
+      <div class="item">
+        <div>4</div>
+      </div>
+      <div class="item">
+        <div>5</div>
+      </div>
+      <div class="item">
+        <div>6</div>
+      </div>
+      <div class="item">
+        <div>7</div>
+      </div>
+      <div class="item">
+        <div>8</div>
+      </div>
+      <div class="item">
+        <div>9</div>
+      </div>
+    </div>
+  </figure>
+  <figure class="grid__position--item">
+    <figcaption>align-self: end;</figcaption>
+    <div class="grid__example">
+      <div class="item">
+        <div>1</div>
+      </div>
+      <div class="item">
+        <div>2</div>
+      </div>
+      <div class="item">
+        <div>3</div>
+      </div>
+      <div class="item">
+        <div>4</div>
+      </div>
+      <div class="item">
+        <div>5</div>
+      </div>
+      <div class="item">
+        <div>6</div>
+      </div>
+      <div class="item">
+        <div>7</div>
+      </div>
+      <div class="item">
+        <div>8</div>
+      </div>
+      <div class="item">
+        <div>9</div>
+      </div>
+    </div>
+  </figure>
+  <figure class="grid__position--item">
+    <figcaption>align-self: center;</figcaption>
+    <div class="grid__example">
+      <div class="item">
+        <div>1</div>
+      </div>
+      <div class="item">
+        <div>2</div>
+      </div>
+      <div class="item">
+        <div>3</div>
+      </div>
+      <div class="item">
+        <div>4</div>
+      </div>
+      <div class="item">
+        <div>5</div>
+      </div>
+      <div class="item">
+        <div>6</div>
+      </div>
+      <div class="item">
+        <div>7</div>
+      </div>
+      <div class="item">
+        <div>8</div>
+      </div>
+      <div class="item">
+        <div>9</div>
+      </div>
+    </div>
+  </figure>
+</div>
+
+
+
+              <h3>grid-template</h3>
+              <p><code>grid-template: grid-template-rows / grid-template-columns;</code></p>
+
+              <h3>grid-row / grid-column</h3>
+              <p><code>grid-row: grid-row-start / grid-row-end;</code></p>
+              <p><code>grid-column: grid-column-start / grid-column-end</code></p>
+
+            </section>
+
+
+            <div class="grid__item grid__item-area">
+              <h2>grid-area</h2>
+              <pre>
+  <code>
+.grid-area__inner {
+
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+
+  "header header header header"
+  "main main . aside" /<span class="color-red">точка делает пустым блок</span>
+  "footer footer footer footer";         
+}
+.grid-header {
+  grid-area: header; grid-area: имя области
+  background-color: rgba(255, 0, 0, 0.327);
+}
+.grid-main {
+  grid-area: main;
+  background-color: rgba(169, 38, 193, 0.475);
+}
+.grid-aside {
+  grid-area: aside;
+  background-color: rgba(65, 155, 145, 0.517);
+}
+.grid-footer {
+  grid-area: footer;
+  background-color: rgb(173, 195, 114);
+}
+  </code>
+</pre>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+
+    <footer class="page--footer">
+      <div class="container">
+        <div class="page--footer__inner">
+
+          footer
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

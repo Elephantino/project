@@ -1,8 +1,12 @@
-let menuOnPageBtn = document.querySelector('.menu-on-page__btn');
 
-menuOnPageBtn.onclick = function () {
+
+let menuOnPageBtn = document.querySelector('.menu-on-page__btn');
+if (menuOnPageBtn) {
+  menuOnPageBtn.onclick = function () {
   menuOnPageBtn.classList.toggle('active');
 }
+}
+ 
 
 
 
