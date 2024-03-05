@@ -548,7 +548,7 @@ summary::-webkit-details-marker {
 
 .grid__example {
   width: 250px;
-  height: 150px;
+  height: 200px;
   border: 1px solid var(--color-blue);
   padding: 1px;
   gap: 1px;
@@ -556,9 +556,12 @@ summary::-webkit-details-marker {
   grid-template-columns: repeat(3, 50px);
 
 }
+
+
 .grid__example > .item {
   background-color: var(--color-light-blue);
   padding: 3px;
+  
 }
 
 .grid__example>.item > div {
@@ -566,48 +569,38 @@ summary::-webkit-details-marker {
   padding: 2px;
 }
 
+.grid__position--example figcaption {
+  font-family: monospace;
+}
 
 
 .grid__position--item {
   display: inline-block;
-  margin: 0 1em 0 0;
-}
-
-.justify-self > .grid__position--item:nth-child(2) .item{
-  justify-self: start;
-}
-.justify-self>.grid__position--item:nth-child(3) .item {
-  justify-self: end;
-}
-.justify-self>.grid__position--item:nth-child(4) .item {
-  justify-self: center;
-}
-
-
-.align-self>.grid__position--item:nth-child(2) .item {
-  align-self: start;
-}
-
-.align-self>.grid__position--item:nth-child(3) .item {
-  align-self: end;
-}
-
-.align-self>.grid__position--item:nth-child(4) .item {
-  align-self: center;
+  margin: 0 1em 1em 0;
+  vertical-align: bottom;
 }
 
 
 
-.place-self>.grid__position--item:nth-child(2) .item {
-  align-self: start;
+.place-self-one > .grid__position--item:first-child .item{
+  place-self: start stretch;
+}
+.place-self-one>.grid__position--item:nth-child(2) .item {
+  place-self: center stretch;
+}
+.place-self-one>.grid__position--item:last-child .item {
+  place-self: end stretch;
 }
 
-.place-self>.grid__position--item:nth-child(3) .item {
-  align-self: end;
-}
 
-.place-self>.grid__position--item:nth-child(4) .item {
-  align-self: center;
+.place-self-two>.grid__position--item:first-child .item {
+  place-self: stretch start;
+}
+.place-self-two>.grid__position--item:nth-child(2) .item {
+  place-self: stretch center;
+}
+.place-self-two>.grid__position--item:last-child .item {
+  place-self: stretch end;
 }
 
 
