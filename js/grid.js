@@ -1,75 +1,55 @@
 let stretch = 'stretch';
 
 
-let gridExamplePlaceContent = document.querySelector(".grid-example_place-content");
-let gridExampleInner = document.querySelectorAll(".grid-example__inner");
+let gECommon = document.querySelector(".grid-example-common");
+let gECommonInner = gECommon.querySelectorAll(".grid-example__inner");
+let gEItem = gECommon.querySelector('.item');
 
-let selectAlignContent = gridExamplePlaceContent.querySelector('.grid-example__select-align-content');
-let selectJustifyContent = gridExamplePlaceContent.querySelector('.grid-example__select-justify-content');
+let gEAlignContent = gECommon.querySelector('.select-align-content');
+let gEJustifyContent = gECommon.querySelector('.select-justify-content');
+let gEAlignSelf = gECommon.querySelector('.select-align-self');
+let gEJustifySelf = gECommon.querySelector('.select-justify-self');
+let gEAlignItems = gECommon.querySelector('.select-align-items');
+let gEJustifyItems = gECommon.querySelector('.select-justify-items');
 
 let defaultAlignContent = stretch;
 let defaultJustifyContent = stretch;
-
-
-selectAlignContent.addEventListener('change', function () {
-  defaultAlignContent = this.value;
-  gridExampleInner[0].style = 'place-content:' + defaultAlignContent + ' ' + defaultJustifyContent + ';'
-});
-
-selectJustifyContent.addEventListener('change', function () {
-  defaultJustifyContent = this.value;
-  gridExampleInner[0].style = 'place-content:' + defaultAlignContent + ' ' + defaultJustifyContent + ';'
-});
-
-
-
-
-
-
-let gridExamplePlaceSelf = document.querySelector('.grid-example_place-self');
-let gridExamplePlaceSelfItem = document.querySelector('.grid-example_place-self .item');
-
-let selectAlignSelf = gridExamplePlaceSelf.querySelector('.grid-example__select-align-self');
-let selectJustifySelf = gridExamplePlaceSelf.querySelector('.grid-example__select-justify-self');
-
 let defaultAlignSelf = stretch;
 let defaultJustifySelf = stretch;
-
-
-selectAlignSelf.addEventListener('change', function () {
-  defaultAlignSelf = this.value;
-  gridExamplePlaceSelfItem.style = 'place-self:' + defaultAlignSelf + ' ' + defaultJustifySelf + ';'
-});
-
-selectJustifySelf.addEventListener('change', function () {
-  defaultJustifySelf = this.value;
-  gridExamplePlaceSelfItem.style = 'place-self:' + defaultAlignSelf + ' ' + defaultJustifySelf + ';'
-});
-
-
-
-
-
-let gridExamplePlaceItems = document.querySelector(".grid-example_place-items");
-let gridExamplePlaceItemsInner = gridExamplePlaceItems.querySelectorAll(".grid-example__inner");
-
-let selectAlignItems = gridExamplePlaceItems.querySelector('.grid-example__select-align-items');
-let selectJustifyItems = gridExamplePlaceItems.querySelector('.grid-example__select-justify-items');
-
 let defaultAlignItems = stretch;
 let defaultJustifyItems = stretch;
 
-selectAlignItems.addEventListener('change', function () {
-  selectAlignItems = this.value;
-  gridExamplePlaceItemsInner[0].style = 'place-items:' + selectAlignItems + ' ' + defaultJustifyItems + ';'
+
+
+gEAlignContent.addEventListener('change', function () {
+  defaultAlignContent = this.value;
+  gECommonInner[0].style = 'place-content:' + defaultAlignContent + ' ' + defaultJustifyContent + ';'
+});
+gEJustifyContent.addEventListener('change', function () {
+  defaultJustifyContent = this.value;
+  gECommonInner[0].style = 'place-content:' + defaultAlignContent + ' ' + defaultJustifyContent + ';'
 });
 
-selectJustifyItems.addEventListener('change', function () {
+
+
+gEAlignSelf.addEventListener('change', function () {
+  defaultAlignSelf = this.value;
+  gEItem.style = 'place-self:' + defaultAlignSelf + ' ' + defaultJustifySelf + ';'
+});
+gEJustifySelf.addEventListener('change', function () {
+  defaultJustifySelf = this.value;
+  gEItem.style = 'place-self:' + defaultAlignSelf + ' ' + defaultJustifySelf + ';'
+});
+
+
+
+gEAlignItems.addEventListener('change', function () {
+  gEAlignItems = this.value;
+  gECommonInner[0].style = 'place-items:' + gEAlignItems + ' ' + defaultJustifyItems + ';'
+});
+
+gEJustifyItems.addEventListener('change', function () {
   defaultJustifyItems = this.value;
-  gridExamplePlaceItemsInner[0].style = 'place-items:' + selectAlignItems + ' ' + defaultJustifyItems + ';'
+  gECommonInner[0].style = 'place-items:' + gEAlignItems + ' ' + defaultJustifyItems + ';'
 });
-
-
-
-
 

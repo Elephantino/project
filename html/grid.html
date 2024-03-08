@@ -76,29 +76,70 @@
             <section class="grid__position">
 
 
-              <h2>Выравнивание всей сетки</h2>
+              <div class="grid-example grid-example-common">
 
-              <div class="grid-example grid-example_place-content">
-                <p>place-content:
-                  <select class="grid-example__select-align-content">
-                    <option value="stretch">stretch</option>
-                    <option value="start">start</option>
-                    <option value="end">end</option>
-                    <option value="center">center</option>
-                    <option value="space-between">space-between</option>
-                    <option value="space-around">space-around</option>
-                    <option value="space-evenly">space-evenly</option>
-                  </select>
-                  <select class="grid-example__select-justify-content">
-                    <option value="stretch">stretch</option>
-                    <option value="start">start</option>
-                    <option value="end">end</option>
-                    <option value="center">center</option>
-                    <option value="space-between">space-between</option>
-                    <option value="space-around">space-around</option>
-                    <option value="space-evenly">space-evenly</option>
-                  </select>
-                </p>
+                <div class="place-content">
+                  <p>place-content:
+                    <select class="select-align-content">
+                      <option disabled>align-content</option>
+                      <option value="stretch">stretch</option>
+                      <option value="start">start</option>
+                      <option value="end">end</option>
+                      <option value="center">center</option>
+                      <option value="space-between">space-between</option>
+                      <option value="space-around">space-around</option>
+                      <option value="space-evenly">space-evenly</option>
+                    </select>
+                    <select class="select-justify-content">
+                      <option disabled>justify-content</option>
+                      <option value="stretch">stretch</option>
+                      <option value="start">start</option>
+                      <option value="end">end</option>
+                      <option value="center">center</option>
+                      <option value="space-between">space-between</option>
+                      <option value="space-around">space-around</option>
+                      <option value="space-evenly">space-evenly</option>
+                    </select>
+                  </p>
+                </div>
+                <div class="place-self">
+                  <p>place-self:
+                    <select class="select-align-self">
+                      <option disabled>align-self</option>
+                      <option value="stretch">stretch</option>
+                      <option value="start">start</option>
+                      <option value="end">end</option>
+                      <option value="center">center</option>
+                    </select>
+                    <select class="select-justify-self">
+                      <option disabled>justify-self</option>
+                      <option value="stretch">stretch</option>
+                      <option value="start">start</option>
+                      <option value="end">end</option>
+                      <option value="center">center</option>
+                    </select>
+                  </p>
+                </div>
+                <div class="place-items">
+                  <p>place-items:
+                    <select class="select-align-items">
+                      <option disabled>align-items</option>
+                      <option value="stretch">stretch</option>
+                      <option value="start">start</option>
+                      <option value="end">end</option>
+                      <option value="center">center</option>
+                    </select>
+                    <select class="select-justify-items">
+                      <option disabled>justify-items</option>
+                      <option value="stretch">stretch</option>
+                      <option value="start">start</option>
+                      <option value="end">end</option>
+                      <option value="center">center</option>
+                    </select>
+                  </p>
+                </div>
+
+
                 <div class="grid-example__inner">
                   <div class="item">
                     <div>1</div>
@@ -129,104 +170,6 @@
                   </div>
                 </div>
               </div>
-
-              <h2>Выравнивание конкретного элемента</h2>
-
-              <div class="grid-example grid-example_place-self">
-                <p>place-self:
-                  <select class="grid-example__select-align-self">
-                    <option value="stretch">stretch</option>
-                    <option value="start">start</option>
-                    <option value="end">end</option>
-                    <option value="center">center</option>
-                  </select>
-                  <select class="grid-example__select-justify-self">
-                    <option value="stretch">stretch</option>
-                    <option value="start">start</option>
-                    <option value="end">end</option>
-                    <option value="center">center</option>
-                  </select>
-                </p>
-                <div class="grid-example__inner">
-                  <div class="item">
-                    <div>1</div>
-                  </div>
-                  <div class="item">
-                    <div>2</div>
-                  </div>
-                  <div class="item">
-                    <div>3</div>
-                  </div>
-                  <div class="item">
-                    <div>4</div>
-                  </div>
-                  <div class="item">
-                    <div>5</div>
-                  </div>
-                  <div class="item">
-                    <div>6</div>
-                  </div>
-                  <div class="item">
-                    <div>7</div>
-                  </div>
-                  <div class="item">
-                    <div>8</div>
-                  </div>
-                  <div class="item">
-                    <div>9</div>
-                  </div>
-                </div>
-              </div>
-
-              <h2>Выравнивание всех элементов внутри сетки</h2>
-
-              <div class="grid-example grid-example_place-items">
-                <p>place-items:
-                  <select class="grid-example__select-align-items">
-                    <option value="stretch">stretch</option>
-                    <option value="start">start</option>
-                    <option value="end">end</option>
-                    <option value="center">center</option>
-                  </select>
-                  <select class="grid-example__select-justify-items">
-                    <option value="stretch">stretch</option>
-                    <option value="start">start</option>
-                    <option value="end">end</option>
-                    <option value="center">center</option>
-                  </select>
-                </p>
-                <div class="grid-example__inner">
-                  <div class="item">
-                    <div>1</div>
-                  </div>
-                  <div class="item">
-                    <div>2</div>
-                  </div>
-                  <div class="item">
-                    <div>3</div>
-                  </div>
-                  <div class="item">
-                    <div>4</div>
-                  </div>
-                  <div class="item">
-                    <div>5</div>
-                  </div>
-                  <div class="item">
-                    <div>6</div>
-                  </div>
-                  <div class="item">
-                    <div>7</div>
-                  </div>
-                  <div class="item">
-                    <div>8</div>
-                  </div>
-                  <div class="item">
-                    <div>9</div>
-                  </div>
-                </div>
-              </div>
-
-
 
 
 
