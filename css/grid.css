@@ -1,0 +1,84 @@
+.grid-example {
+  font-family: monospace;
+  width: max-content;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+
+.grid-example__inner {
+  width: 100%;
+  height: 200px;
+  border: 2px solid red;
+  padding: 2px;
+  gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+}
+
+.grid-example__inner>.item {
+  background-color: rgb(97, 97, 192);
+  padding: 3px;
+}
+
+.grid-example__inner>.item>div {
+  background: yellow;
+  padding: 2px;
+}
+
+
+
+
+
+.grid-example {
+  position: relative;
+}
+
+.grid-example select {
+  min-width: 117px;
+}
+
+.grid-example_place-content::before {
+  content: 'align-content';
+  position: absolute;
+  top: 10px;
+  right: 165px;
+}
+
+.grid-example_place-content::after {
+  content: 'justify-content';
+  position: absolute;
+  top: 10px;
+  right: 27px;
+}
+
+
+.grid-example_place-self::before {
+  content: 'align-self';
+  position: absolute;
+  top: 10px;
+  right: 175px;
+}
+
+.grid-example_place-self::after {
+  content: 'justify-self';
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+
+
+.grid-example_place-items::before {
+  content: 'align-items';
+  position: absolute;
+  top: 10px;
+  right: 175px;
+}
+
+.grid-example_place-items::after {
+  content: 'justify-items';
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
