@@ -43,6 +43,22 @@
       <div class="container">
         <div class="main__inner">
 
+
+          <article>
+            <h2>remove add class</h2>
+            <textarea cols="60" rows="7">
+const list = document.querySelectorAll('.menu li a');
+list.forEach(item => {
+  item.addEventListener('click', (e) => {
+    list.forEach(el => { el.classList.remove('active'); });
+    item.classList.add('active');
+  });
+});
+</textarea>
+          </article>
+
+
+
           <textarea cols="55" rows="41">
 
 <div class="performance"> 
@@ -373,8 +389,8 @@ js.js:68 Актёр 4: Бёрджесс Мередит
           </div>
 
 
-            
-          
+
+
 
 
 
