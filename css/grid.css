@@ -137,3 +137,82 @@
   top: -30px;
   left: 40px;
 }
+
+
+
+
+.grid-adaptive {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+
+.grid-adaptive .auto-fill {
+  display: grid;
+  gap: .7em;
+  grid-template-columns: repeat(auto-fill, minmax(3em, 1fr));
+  grid-auto-rows: 3em;
+  border: 1px solid coral;
+  padding: .3em;
+
+  margin: 1em;
+}
+.grid-adaptive .auto-fit {
+  display: grid;
+  gap: .7em;
+  grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+  grid-auto-rows: 3em;
+  border: 1px solid coral;
+  padding: .3em;
+
+  margin: 1em;
+}
+
+.grid-adaptive .flex {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.grid-adaptive .item {
+  background-color: #b46262;
+}
+
+
+.grid-adaptive .auto-fill:first-child,
+.grid-adaptive .auto-fit:first-child,
+.grid-adaptive .flex:first-child {
+  width: 500px;
+}
+.grid-adaptive .auto-fill:nth-child(2),
+.grid-adaptive .auto-fit:nth-child(2),
+.grid-adaptive .flex:nth-child(2) {
+  width: 350px;
+}
+.grid-adaptive .auto-fill:nth-child(3), 
+.grid-adaptive .auto-fit:nth-child(3) {
+  width: 300px;
+}
+.grid-adaptive .auto-fill:nth-child(4),
+.grid-adaptive .auto-fit:nth-child(4) {
+  width: 250px;
+}
+.grid-adaptive .auto-fill:nth-child(5),
+.grid-adaptive .auto-fit:nth-child(5) {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
