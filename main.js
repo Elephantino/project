@@ -80,31 +80,40 @@ layoutTabItems.forEach(layoutCheckoutTabs);
 
 let svgBoxOne = document.querySelector(".svgBoxOne");
 
+if (svgBoxOne) {
 svgBoxOne.addEventListener('click', function () {
   svgBoxOne.classList.toggle('svgAnimOne');
 });
 
+}
+
 
 let svgBoxTwo = document.querySelector(".svgBoxTwo");
-
+if (svgBoxTwo) {
 svgBoxTwo.addEventListener('click', function () {
   svgBoxTwo.classList.toggle('svgAnimTwo');
-});
+});  
+}
+
 
 
 let svgBoxThree = document.querySelector(".svgBoxThree");
-
+if (svgBoxThree) {
 svgBoxThree.addEventListener('click', function () {
   svgBoxThree.classList.toggle('svgAnimThree');
 });
+}
+
 
 
 
 let svgBoxFour = document.querySelector(".svgBoxFour");
-
+if (svgBoxFour) {
 svgBoxFour.addEventListener('click', function () {
   svgBoxFour.classList.toggle('svgAnimFour');
 });
+}
+
 
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
@@ -123,7 +132,28 @@ svgBoxFour.addEventListener('click', function () {
 
 
 
+// modal html
 
+
+const openModal = document.querySelector('.openModal');
+const closeModal = document.querySelector('.closeModal');
+const modal = document.querySelector('.modal');
+
+
+if (openModal) {
+openModal.addEventListener('click', () => {
+  modal.showModal();
+})
+
+closeModal.addEventListener('click', () => {
+  modal.close();
+})
+
+modal.addEventListener('click', (e) => {
+  // console.log(e.target);
+  if (e.target === modal) modal.close();
+})  
+}
 
 
 

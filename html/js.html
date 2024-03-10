@@ -2159,9 +2159,8 @@ console.log(eClass<span class="color-yellow">[3]</span>);   <span class="color-y
 
               <li class="layout__content-item events">
 
-
-
                 <h2>events</h2>
+
                 <a href="https://www.youtube.com/watch?v=bWCzbR5DvCo&t=908s" target="_blank"
                   rel="noopener noreferrer">источник</a>
 
@@ -2230,28 +2229,91 @@ document.addEventListener("click", function (event) {
 </pre>
 
 
-                <h3>виды событий</h3>
+                <article>
+                  <hgroup>
+                    <h2>События форм</h2>
+                    <h2>oninput</h2>
 
-                <h4>простые:</h4>
-                <ul>
-                  <li><code>mousedown / mouseup -- </code>нажата / отпущена</li>
-                  <li>
-                    <code>mouseover / mouseout -- </code>курсор появляется над элементом / уходит с него
-                  </li>
-                  <li>
-                    <code>mousemove -- </code>каждое движение над элементом генерирует событие
-                  </li>
-                  <li>
-                    <code>contentmenu -- </code>нажатие правой клавишей миши(и клавиатурой вызывается)
-                  </li>
-                </ul>
 
-                <h4>контекстные:</h4>
-                <ul>
-                  <li><code>click -- </code>Вызывается при mousedown, а затем mouseup над одним и тем же элементом
-                  </li>
-                  <li><code>dblclick -- </code>двойной <code>click</code> над одним и тем же элементом</li>
-                </ul>
+                    <a name="oninput">
+                      <p>получить данные из поля ввода без отправки формы</p>
+                    </a>
+
+                    <p>Мы уже умеем получать <a href="https://htmlacademy.ru/courses/343/run/15">данные из поля
+                        ввода</a>, но
+                      только
+                      после того, как форма была отправлена. Сейчас же нам нужно оценить
+                      длину комментария ещё до отправки. Как быть? Воспользуемся обработчиком событий oninput (в
+                      переводе с
+                      английского это
+                      означает «при вводе»). Инструкции внутри обработчика oninput выполняются каждый раз, когда
+                      значение в
+                      поле ввода
+                      меняется. Например:</p>
+                    <pre>
+  <code>
+          Найдём поле ввода
+let textarea = document.querySelector('textarea');
+
+          Добавим обработчик событий
+textarea.oninput = function () {
+          Выведем данные из поля ввода
+  console.log(textarea.value);
+};
+  </code>
+</pre>
+
+                    <p>Благодаря обработчику событий oninput мы можем получить текст комментария ещё до того, как
+                      пользователь
+                      его
+                      отправит.</p>
+
+
+                    <form action="#">
+
+                      <textarea class="first-textarea" name="first-textarea" cols="30" rows="5"
+                        id="first-textarea"></textarea>
+
+                      <span class="output-count">использовано
+                        <output class="first-output" for="first-textarea">0</output>/10 символов
+                      </span>
+
+                      <button class="first-button" type="button">button</button>
+
+                    </form>
+
+                  </hgroup>
+
+
+                  <h3>виды событий</h3>
+
+                  <h4>простые:</h4>
+                  <ul>
+                    <li><code>mousedown / mouseup -- </code>нажата / отпущена</li>
+                    <li>
+                      <code>mouseover / mouseout -- </code>курсор появляется над элементом / уходит с него
+                    </li>
+                    <li>
+                      <code>mousemove -- </code>каждое движение над элементом генерирует событие
+                    </li>
+                    <li>
+                      <code>contentmenu -- </code>нажатие правой клавишей миши(и клавиатурой вызывается)
+                    </li>
+                  </ul>
+
+                  <h4>контекстные:</h4>
+                  <ul>
+                    <li><code>click -- </code>Вызывается при mousedown, а затем mouseup над одним и тем же элементом
+                    </li>
+                    <li><code>dblclick -- </code>двойной <code>click</code> над одним и тем же элементом</li>
+                  </ul>
+
+
+
+
+
+
+                </article>
 
 
                 <ul class="mouseEvent__list">
@@ -2850,6 +2912,7 @@ password.oninput = function () {
 
 
               </li>
+
 
 
               <li class="js-item"> <!-- выбор цвета по клику -->

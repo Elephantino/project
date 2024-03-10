@@ -425,3 +425,35 @@ for (let div of divAll) {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+let textarea = document.querySelector('.first-textarea');
+let textareaOutput = document.querySelector('.first-output');
+let button = document.querySelector('.first-button');
+
+
+if (textarea) {
+textarea.onsubmit = function () {
+  textareaOutput.textContent = '0';
+}
+
+textarea.oninput = function () {
+  textareaOutput.textContent = textarea.value.length;
+  if (textarea.value.length > 10) {
+    textarea.style = "color: red; border-color: red;"
+    button.disabled = true;
+
+  } else {
+    textarea.style = "color: none; border-color: none;"
+    button.disabled = false;
+  }
+}
+}
