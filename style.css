@@ -77,8 +77,8 @@
 
 .menu-on-page {
   position: sticky;
-    top: 10px;
-    color: rgb(40, 129, 37);
+  top: 10px;
+  color: rgb(40, 129, 37);
 }
 .menu-on-page__btn {
   width: 50px;
