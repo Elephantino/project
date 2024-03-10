@@ -138,14 +138,11 @@
                     этот атрибут в случае, если загрузка происходит в новой вкладке или новом окне.</p>
                 </details>
 
-                </details>
+
               </li>
               <li class="layout__content-item text">
 
-
-
-
-
+                <h2>text</h2>
 
                 <p><code><b>text-overflow:</b> clip / ellipsis</code></p>
                 <div class="text-overflow">
@@ -171,25 +168,43 @@
                 <hr>
 
                 <div class="preview text-align">
-                  <p class="text">
-                    <code><b>text-align:</b> left / right / centet / justify /<span class="color-red">start и end (зависят от direction ltr/rtl)</span></code>
-                  </p>
+
+                  <h2>text-align</h2>
+                  <code><b>text-align:</b> left / right / centet / justify /<span class="color-red">start и end (зависят от direction ltr/rtl)</span></code>
+
                   <p>задается контейнеру, внутри которого находится контент</p>
-                  <div class="inner">
-                    <div class="item">
-                      <p>left</p>
-                      <p>right</p>
-                      <p>center</p>
-                      <p>start</p>
-                      <p>start</p>
-                    </div>
-                    <div class="item">
-                      <p><b>justify</b></p>
-                      <p>Lorem ipsum dolor amet. Inventore maxime exercitationem saepe esse. Lorem ipsum dolor sit
-                        consectetur
-                        exercitationem elit. Numquam tempore, delectus exercitationem exercitm error.</p>
-                    </div>
+
+                  <div class="text-align">
+                    <ul class="list-reset">
+                      <li>
+                        <h3>left (default)</h3>
+                        <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
+                      </li>
+                      <li style="text-align: right">
+                        <h3>right</h3>
+                        <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
+                      </li>
+                      <li style="text-align: center">
+                        <h3>center</h3>
+                        <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
+                      </li>
+                      <li style="text-align: justify">
+                        <h3>justify</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus incidunt aliquam
+                          voluptate? Maiores, eos saepe. Iusto facilis laboriosam nobis ad!</p>
+                      </li>
+                      <li style="text-align: start">
+                        <h3>start</h3>
+                        <p>зависит от <code>direction ltr/rtl</code></p>
+                      </li>
+                      <li style="text-align: end">
+                        <h3>end</h3>
+                        <p>зависит от <code>direction ltr/rtl</code></p>
+                      </li>
+                    </ul>
                   </div>
+
+
                 </div>
 
                 <hr>
@@ -234,11 +249,7 @@
                     <code><b>vertical-align -- </b>top / bottom / baseline / middle / sub / super / text-bottom / text-top</code>
                   </p>
                   <p>задаётся элементу, а не содержащему его контейнеру</p>
-                  <div class="inner">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                  </div>
+                  <img src="../img/vertical-align.png" alt="vertical-align">
                 </div>
 
                 <hr>
@@ -278,71 +289,6 @@
                 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <h2>text-align</h2>
-                <p>задается контейнеру, внутри которого находится контент</p>
-
-                <div class="text-align">
-                  <ul class="list-reset">
-                    <li>
-                      <h3>left (default)</h3>
-                      <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
-                    </li>
-                    <li style="text-align: right">
-                      <h3>right</h3>
-                      <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
-                    </li>
-                    <li style="text-align: center">
-                      <h3>center</h3>
-                      <p>Lorem ipsum, consectetur adipisicing elit. Quia, accusamus.</p>
-                    </li>
-                    <li style="text-align: justify">
-                      <h3>justify</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus incidunt aliquam
-                        voluptate? Maiores, eos saepe. Iusto facilis laboriosam nobis ad!</p>
-                    </li>
-                    <li style="text-align: start">
-                      <h3>start</h3>
-                      <p>зависит от <code>direction ltr/rtl</code></p>
-                    </li>
-                    <li style="text-align: end">
-                      <h3>end</h3>
-                      <p>зависит от <code>direction ltr/rtl</code></p>
-                    </li>
-                  </ul>
-                </div>
 
 
                 <p><code>vertical-align -- </code>задаётся элементу, а не содержащему его контейнеру</p>

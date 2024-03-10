@@ -86,6 +86,15 @@
 
 /* ... ... ... ... ... ... ... ... ... ... ... ... */
 
+.text-align > ul{
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(3, 210px);
+}
+
+
+/* ... ... ... ... ... ... ... ... ... ... ... ... */
+
 .text-overflow p {
   border: 1px solid red;
   width: 100px;
@@ -119,38 +128,6 @@
 
 /* ... ... ... ... ... ... ... ... ... ... ... ... */
 
-.text-align .item:first-child p:nth-child(1) {
-  text-align: left;
-}
-
-.text-align .item:first-child p:nth-child(2) {
-  text-align: right;
-}
-
-.text-align .item:first-child p:nth-child(3) {
-  text-align: center;
-}
-
-.text-align .item:first-child p:nth-child(4) {
-  text-align: start;
-}
-
-.text-align .item:first-child p:nth-child(5) {
-  text-align: end;
-}
-
-
-.text-align .item:last-child p:nth-child(1) {
-  text-align: center;
-  margin: 10px 0 15px;
-}
-
-.text-align .item:last-child p:nth-child(2) {
-  text-align: justify;
-}
-
-/* ... ... ... ... ... ... ... ... ... ... ... ... */
-
 
 .text-justify .item p:first-child {
   text-align: center;
@@ -179,14 +156,7 @@
 }
 
 
-
-
-
-
-
-
-
-
+/* ... ... ... ... ... ... ... ... ... ... ... ... */
 
 
 .video table,
@@ -209,11 +179,7 @@
 }
 
 
-
-
-
-
-
+/* ... ... ... ... ... ... ... ... ... ... ... ... */
 
 
 .table__inner {
@@ -243,13 +209,7 @@
 }
 
 
-
-
-
-
-
-
-
+/* ... ... ... ... ... ... ... ... ... ... ... ... */
 
 
 
@@ -272,3 +232,28 @@
 .closeModal {
   border: 1px solid black;
 }
+
+
+/* ... ... ... ... ... ... ... ... ... ... ... ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
