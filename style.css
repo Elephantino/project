@@ -36,11 +36,14 @@
   padding: 0.3em;
   display: flex;
   gap: 1px;
-
 }
 .colors__item {
   width: 150px;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
 }
 .colors__item:nth-child(1) {
   background-color: #c72;
@@ -55,16 +58,16 @@
   background: #918151;
 }
 .colors__item:nth-child(5) {
-  background: rgb(228, 113, 122);
+  background: #e4717a;
 }
 .colors__item:nth-child(6) {
-  background: rgb(255, 207, 72);
+  background: #ffcf48;
 }
 .colors__item:nth-child(7) {
-  background: rgb(239, 169, 74);
+  background: #efa94a;
 }
 .colors__item:nth-child(8) {
-  background: rgb(255, 140, 105);
+  background: #ff8c69;
 }
 
 
