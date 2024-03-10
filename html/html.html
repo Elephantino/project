@@ -63,7 +63,7 @@
                 <li class="layout__tab-item">audio</li>
                 <li class="layout__tab-item">table</li>
                 <li class="layout__tab-item">модальное окно dialog</li>
-                <li class="layout__tab-item"></li>
+                <li class="layout__tab-item">Дата атрибуты</li>
                 <li class="layout__tab-item"></li>
                 <li class="layout__tab-item"></li>
                 <li class="layout__tab-item"></li>
@@ -1521,7 +1521,7 @@ th аналогичен td, он так же должен располагать
 
                 </section>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item dialog">
 
                 <section class="dialog">
 
@@ -1615,7 +1615,39 @@ th аналогичен td, он так же должен располагать
 
                 </section>
               </li>
-              <li class="layout__content-item"></li>
+              <li class="layout__content-item data-attribute">
+                <h2>Дата атрибуты</h2>
+                <p>в HTML можно создавать свои собственные атрибуты. Имена таких атрибутов начинаются с префикса data-,
+                  после которого идёт
+                  любое выбранное разработчиком слово. Это немного похоже на переменные: вы сами решаете, как назвать
+                  атрибут и какое он
+                  должен иметь значение.</p>
+
+                <p><code>&lt;div data-cat-name="Кекс"&gt;&lt;/div&gt;</code></p>
+
+                <p>Атрибуты, начинающиеся с data-, обычно используют, чтобы хранить вспомогательную информацию.</p>
+
+                <h3>Как получить значение такого атрибута в JavaScript?</h3>
+
+                <p>Для этого используют свойство dataset, после которого указывают имя атрибута без префикса data-:</p>
+
+                <p><code>элемент.dataset.имяАтрибутаБезПрефикса</code></p>
+
+                <p>Если имя атрибута состояло из нескольких слов и в нём были дефисы, то в JavaScript его записывают в
+                  «верблюжьем» стиле
+                  (по-английски camelCase)</p>
+
+                <textarea cols="60" rows="4">
+      Чтобы получить значение атрибута из примера выше
+
+let element = document.querySelector('div');
+console.log(element.dataset.catName);
+</textarea>
+
+
+
+
+              </li>
               <li class="layout__content-item"></li>
               <li class="layout__content-item"></li>
               <li class="layout__content-item"></li>
