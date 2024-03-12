@@ -123,15 +123,6 @@ svgBoxFour.addEventListener('click', function () {
 
 
 
-
-
-
-
-
-
-
-
-
 // modal html
 
 
@@ -158,3 +149,43 @@ modal.addEventListener('click', (e) => {
 
 
 
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+
+/* **<button class="guess-the-number">игра - угадай число</button> *///
+
+
+let guessTheNumber = document.querySelector('.guess-the-number');
+
+
+if (guessTheNumber) {
+  guessTheNumber.addEventListener('click', () => {
+
+    let greating = 'Привет, как твоё имя?';
+    let name = prompt(greating);
+
+    while (name == '' || name == null) {
+      name = prompt(greating);
+    }
+
+    function random(number) {
+      return Math.ceil(Math.random() * number);
+    }
+
+    alert(name + ', я загадал какое то число от 0 до 100, попробуй угадать');
+
+    let number = random(100);
+    alert(number);
+    let guess = prompt('какое число я загадал?');
+    let numberOfGuesses = 1;
+    while (guess != number) {
+      numberOfGuesses = numberOfGuesses + 1;
+      if (guess > number) {
+        guess = prompt('много, попробуй еще раз');
+      } else {
+        guess = prompt('мало, попробуй еще раз');
+      }
+    }
+
+    alert(`ты угадал число ${number} Тебе понадобилось ${numberOfGuesses} попыток`);
+  })
+}
