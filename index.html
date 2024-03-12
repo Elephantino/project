@@ -190,6 +190,39 @@ tabItems.forEach(checkoutTabs);
 
         <button class="guess-the-number">игра - угадай число</button>
 
+        <hr>
+
+        <h2>сортировка массива</h2>
+
+        <textarea cols="120" rows="28"> 
+let arr = [4, 1, 3, 2, 5];
+
+console.log(arr);
+
+for (let currentIndex = 0; currentIndex <= arr.length - 2; currentIndex++) {
+
+  let minValue = arr[currentIndex];
+
+  for (let j = currentIndex + 1; j <= arr.length - 1; j++) {
+
+    if(arr[j] < minValue) {
+
+      minValue = arr[j];
+
+      let swap = arr[currentIndex];
+
+      arr[currentIndex] = minValue;
+
+      arr[j] = swap;
+
+      console.log('меняем местами ' + swap + ' и ' + minValue);
+      console.log('Массив сейчас: ' + arr);
+    }
+  }
+  console.log('на позиции ' + currentIndex + ' находится минимальный элемент ' + minValue);
+}
+console.log(arr);
+        </textarea>
 
         <hr>
 
