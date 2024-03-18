@@ -8,6 +8,7 @@
 @import "css/grid.css";
 @import "css/float.css";
 @import "css/swiper.css";
+@import "css/examples.css";
 
 
 
@@ -158,6 +159,58 @@
 
 .layout__tab-item.is-active {
   color: rgb(170, 162, 162);
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* <div class="show-code"> */
+
+.show-code {
+  width: min-content;
+  border: 1px solid silver;
+  padding: 0.3em;
+}
+
+.show-code>* {
+  margin: 0.3em 0;
+}
+
+.show-code__title {
+  margin: 0;
+  text-align: center;
+}
+
+.show-code__description>p {
+  margin: 2px;
+  text-indent: 1em;
+}
+
+.show-code__inner {
+  display: flex;
+  gap: 0.3em;
+  margin-bottom: 0;
+}
+
+.show-code__performance {
+  padding: 0.1em;
+  border: 1px solid silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-code__textarea {
+  border: 1px solid silver;
+  width: 31px;
+  height: 83px;
 }
 
 
@@ -329,13 +382,6 @@ summary::-webkit-details-marker {
 
 
 
-.content-switcher-example {
-  padding: 0 0 25px 0;
-  border-bottom: 1px solid black;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
 
 .content-switcher-example .checkout {
   display: flex;

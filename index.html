@@ -122,17 +122,19 @@
 
 
         <ul>
-          <li><a href="https://itchief.ru/javascript/get-elements#matches-closest-contains" target="_blank" rel="noopener noreferrer">операторы Spread Rest</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=OtJkXuqyjkk&t=488s">ФОРМЫ. ---  ФРИЛАНСЕР</a></li>
+          <li><a href="https://itchief.ru/javascript/get-elements#matches-closest-contains" target="_blank"
+              rel="noopener noreferrer">операторы Spread Rest</a></li>
+          <li><a target="_blank" rel="noopener noreferrer"
+              href="https://www.youtube.com/watch?v=OtJkXuqyjkk&t=488s">ФОРМЫ. --- ФРИЛАНСЕР</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://telegra.ph/Prototipy-02-08">Прототипы</a>
-</li>
+          </li>
         </ul>
-        
 
-        
 
-       
-        <section class="content-switcher-example">
+
+
+
+        <!-- <section class="content-switcher-example">
 
           <textarea name="js" cols="80" rows="12">
 const tabItems = Array.from(document.querySelectorAll('.tab-item'));
@@ -183,7 +185,69 @@ tabItems.forEach(checkoutTabs);
 
           </section>
 
-        </section>
+        </section> -->
+
+
+
+
+        <div class="show-code content-switcher-example">
+          <h2 class="show-code__title">showСode</h2>
+          <div class="show-code__description">
+            <p>description</p>
+          </div>
+          <div class="show-code__inner">
+            <div class="show-code__performance">
+              <section class="checkout">
+
+                <ol class="tab-list list-reset">
+                  <li class="tab-item">1</li>
+                  <li class="tab-item is-active">2</li>
+                  <li class="tab-item">3</li>
+                  <li class="tab-item">4</li>
+                  <li class="tab-item">5</li>
+                </ol>
+
+                <ul class="content-list list-reset">
+                  <li class="content-item">Content-1</li>
+                  <li class="content-item is-active">Content-2</li>
+                  <li class="content-item">Content-3</li>
+                  <li class="content-item">Content-4</li>
+                  <li class="content-item">Content-5</li>
+                </ul>
+
+              </section>
+            </div>
+            <textarea class="show-code__textarea">
+    const tabItems = Array.from(document.querySelectorAll('.tab-item'));
+    const contentItems = Array.from(document.querySelectorAll('.content-item'));
+    //  Array.from что бы работал .find
+    
+    const clearActiveClass = (element, className = 'is-active') => {
+      element.find(item => item.classList.remove(`${className}`))
+    }
+    const setActiveClass = (element, index, className = 'is-active') => {
+      element[index].classList.add(`${className}`)
+    }
+    
+    const checkoutTabs = (item, index) => {
+      item.addEventListener('click', () => {
+    
+        if (item.classList.contains('is-active')) return
+    
+        clearActiveClass(tabItems)
+        clearActiveClass(contentItems)
+    
+        setActiveClass(tabItems, index)
+        setActiveClass(contentItems, index)
+    
+      })
+    }
+    
+    tabItems.forEach(checkoutTabs);
+            </textarea>
+          </div>
+        </div>
+
 
         <ul>
           <li>
@@ -211,7 +275,7 @@ tabItems.forEach(checkoutTabs);
 
         <h2>сортировка массива</h2>
 
-        <textarea cols="120" rows="28"> 
+        <textarea cols="120" rows="28">
 let arr = [4, 1, 3, 2, 5];
 
 console.log(arr);
