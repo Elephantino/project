@@ -831,6 +831,26 @@ datetime -- можно указать дату и время поправки / 
                 <h2>image</h2>
               </a>
 
+              <div>
+                <h2>адаптивное изображение</h2>
+
+                <textarea cols="51" rows="11">
+
+.container {             |     
+  position: relative;    |
+  padding-top: 56,25%;   |  .container > img {
+}                        |    aspect-ratio: 16 / 9;
+                         |    width: 100%; 
+.container > img {       |  }
+  position: absolute;    |
+  top: 0;                |
+  width: 100%;           |
+}                        |
+</textarea>
+              </div>
+
+
+
               <div class="loading">
                 <h3>loading</h3>
                 <p>Браузер не будет загружать ленивые изображения до тех пор, пока пользователь не прокрутит страницу
