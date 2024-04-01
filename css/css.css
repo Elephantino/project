@@ -1,3 +1,91 @@
+
+
+/* example.html */
+
+.hierarchy {
+  color: rgb(24, 22, 22);
+  max-width: 800px;
+}
+
+.hierarchy__title {
+  margin: 0;
+  font-size: 1em;
+}
+
+.hierarchy__inner,
+.hierarchy__inner div {
+  border: 1px solid black;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.hierarchy h1,
+.hierarchy h5 {
+  position: relative;
+}
+
+.hierarchy h1 span,
+.hierarchy h5 span {
+  position: absolute;
+  left: 53%;
+  top: 9px;
+  color: silver;
+}
+
+.hierarchy .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  gap: 0.5em;
+}
+
+.hierarchy .grid>div:last-child {
+  grid-row: 1/-1;
+  grid-column: 2/3;
+}
+
+.hierarchy .grid>div:last-child>div {
+  height: 91%;
+}
+
+.hierarchy__title {
+  margin: 0.5em 0;
+}
+
+.hierarchy__h6 {
+  height: 90%;
+  background: rgba(168, 73, 73, 0.568);
+}
+
+.hierarchy__h5 {
+  background: rgba(39, 79, 119, 0.7);
+}
+
+.hierarchy__h4 {
+  background: rgba(120, 140, 160, 0.7);
+}
+
+.hierarchy__h3 {
+  background: rgba(164, 161, 61, 0.827);
+}
+
+.hierarchy div:has(h1) {
+  background: rgba(50, 40, 10, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .fit-content__inner{
   border:2px solid tomato;
   max-width:300px;
